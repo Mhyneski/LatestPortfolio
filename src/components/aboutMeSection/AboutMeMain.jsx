@@ -24,7 +24,6 @@ const AboutMeMain = () => {
         whileInView="show"
         viewport={{ once: false, amount: 0.7 }}
       >
-        <AboutMeImg />
       </motion.div>
     </div>
   );

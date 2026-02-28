@@ -38,6 +38,16 @@ const experiences = [
       "Provided technical support and system maintenance.",
     ],
   },
+   {
+    job: "Software Engineer",
+    company: "OFI O-Kun",
+    date: "2025 - 2026",
+    responsibilities: [
+      "Developed multi-feature web platforms including blog systems, directory modules, and calendar management.",
+      "Implemented role-based navigation and access control systems.",
+      "Integrated multiple APIs and handled frontend-backend development using Next.js, TypeScript, Chakra UI, FastAPI, and AWS.",
+    ],
+  },
 ];
 
 const AllExperience = () => {
@@ -47,7 +57,7 @@ const AllExperience = () => {
         return (
           <>
             <SingleExperience key={index} experience={experience} />
-            {index < 2 ? (
+            {index < 3 ? (
               <motion.div
                 variants={fadeIn("right", 0)}
                 initial="hidden"

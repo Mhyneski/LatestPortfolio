@@ -7,6 +7,12 @@ import { SiMongodb } from "react-icons/si";
 import { IoLogoFirebase } from "react-icons/io5";
 import { RiNodejsLine } from "react-icons/ri";
 import { RiTailwindCssFill } from "react-icons/ri";
+import { FaAws } from "react-icons/fa";
+import { SiChakraui } from "react-icons/si";
+import { SiFastapi } from "react-icons/si";
+import { SiPython } from "react-icons/si";
+import { SiNextdotjs } from "react-icons/si";
+import { SiTypescript } from "react-icons/si";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
 
@@ -42,6 +48,30 @@ const skills = [
   {
     skill: "TailwindCSS",
     icon: RiTailwindCssFill,
+  },
+  {
+    skill: "Next.js",
+    icon: SiNextdotjs,
+  },
+  {
+    skill: "TypeScript",
+    icon: SiTypescript,
+  },
+  {
+    skill: "AWS",
+    icon: FaAws,
+  },
+  {
+    skill: "Chakra UI",
+    icon: SiChakraui,
+  },
+  {
+    skill: "FastAPI",
+    icon: SiFastapi,
+  },
+  {
+    skill: "Python",
+    icon: SiPython,
   },
 ];
 

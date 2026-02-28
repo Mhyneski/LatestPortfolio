@@ -28,6 +28,11 @@
   --breakpoint-2xl: 1536rem;
 }
 
+html {
+  /* prevent horizontal rubberbanding on mobile */
+  overscroll-behavior-x: contain;
+}
+
 body {
-  @apply bg-darkBrown;
+  @apply bg-darkBrown overflow-x-hidden;
 }

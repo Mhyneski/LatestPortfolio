@@ -1,0 +1,51 @@
+export const projects = [
+  {
+    name: "Fully Serverless Sales Management System",
+    year: "2025 - 2026",
+    align: "right",
+    Image: "../../images/confidential.jpg",
+    link: "#",
+  },
+  {
+    name: "University Management System",
+    year: "2025",
+    align: "left",
+    Image: "../../images/confidential.jpg",
+    link: "#",
+  },
+  {
+    name: "Inventory System with Analytics and Borrowing Module",
+    year: "2025",
+    align: "right",
+    Image: "../../images/Inventory.jpg",
+    link: "#",
+  },
+  {
+    name: "Project estimation With Progress construction monitoring for Fox Construction",
+    year: "2024",
+    align: "left",
+    Image: "../../images/foxconsstruction.png",
+    link: "#",
+  },
+  {
+    name: "Social media platform for the church of jesus christ of latter-day saints",
+    year: "2023",
+    align: "right",
+    Image: "../../images/ldsmedia.png",
+    link: "#",
+  },
+  {
+    name: "Bike lock system using RFID",
+    year: "2023",
+    align: "left",
+    Image: "../../images/bike.jpg",
+    link: "#",
+  },
+  {
+    name: "Barber shop management system",
+    year: "2023",
+    align: "right",
+    Image: "../../images/sharp.jpg",
+    link: "#",
+  },
+];

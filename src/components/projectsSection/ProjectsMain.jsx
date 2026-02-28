@@ -3,44 +3,7 @@ import ProjectsText from "./ProjectsText";
 import SingleProject from "./SingleProject";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
-
-const projects = [
-  {
-    name: "Inventory System with Analytics and Borrowing Module",
-    year: "2025",
-    align: "right",
-    Image: "../../images/Inventory.jpg",
-    link: "#",
-  },
-  {
-    name: "Project estimation With Progress construction monitoring for Fox Construction",
-    year: "2024",
-    align: "left",
-    Image: "../../images/foxconsstruction.png",
-    link: "#",
-  },
-  {
-    name: "Social media platform for the church of jesus christ of latter-day saints",
-    year: "2023",
-    align: "right",
-    Image: "../../images/ldsmedia.png",
-    link: "#",
-  },
-  {
-    name: "Bike lock system using RFID",
-    year: "2023",
-    align: "left",
-    Image: "../../images/bike.jpg",
-    link: "#",
-  },
-  {
-    name: "Barber shop management system",
-    year: "2023",
-    align: "right",
-    Image: "../../images/sharp.jpg",
-    link: "#",
-  },
-];
+import { projects } from "../../data/projectsData";
 
 const ProjectsMain = () => {
   return (

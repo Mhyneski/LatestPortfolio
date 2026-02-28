@@ -33,9 +33,8 @@ const SingleProject = ({ name, year, align, image, link }) => {
           <BiSolidRightTopArrowCircle />
         </a>
       </div>
-      <div className="max-h-[220px] max-w-[400px] rounded-xl overflow-hidden hover:scale-110 transform transition-all duration-500 relative border border-white">
-        <div className="w-full h-full bg-cyan opacity-50 absolute left-0 top-0 hover:opacity-0 transition-all duration-500 md:block sm:hidden"></div>
-        <img src={image} alt="Project Image" className="w-full h-full" />
+      <div className="w-full max-w-[400px] h-[220px] rounded-xl overflow-hidden hover:scale-110 transform transition-all duration-500 relative border border-white flex-shrink-0">
+        <img src={image} alt="Project Image" className="w-full h-full object-cover" />
       </div>
     </motion.div>
   );
