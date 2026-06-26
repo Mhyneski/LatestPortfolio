@@ -2,7 +2,7 @@ import React from 'react'
 
 const SingleContactSocial = ({Icon,link}) => {
   return (
-    <div className='text-2xl h-12 w-12 border-orange text-orange rounded-full p-3 flex items-center justify-center'>
+    <div className='text-xl h-10 w-10 border border-white/10 text-lightGrey rounded-md flex items-center justify-center transition-colors hover:border-cyan hover:text-cyan'>
         <a href={link} target="_blank" rel="noreferrer" className='cursor-pointer'><Icon/></a>
     </div>
   )

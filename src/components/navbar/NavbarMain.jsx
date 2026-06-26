@@ -1,27 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import NavbarLogo from "./NavbarLogo";
 import NavbarLinks from "./NavbarLinks";
 import NavbarBtn from "./NavbarBtn";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { useState } from "react";
+import { HiMenuAlt3, HiX } from "react-icons/hi";
 
 const NavbarMain = () => {
-  const [menuOpen, setMenuOpen]=useState(false);
-  const toggleMenu = ()=> {
-    setMenuOpen(!menuOpen);
-  }
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <nav className="fixed inset-x-0 z-20 mt-2 px-3">
-      <div className="flex justify-between w-full max-w-[1200px] mx-auto bg-black items-center md:p-6 sm:p-4 rounded-r-full rounded-l-full border-[0.5px] border-orange">
+    <nav className="fixed inset-x-0 top-0 z-20 border-b border-white/10 bg-darkBrown/85 backdrop-blur-xl">
+      <div className="mx-auto flex max-w-[1180px] items-center justify-between px-4 py-4">
         <NavbarLogo />
-        {/* links hidden by default, shown on large screens or when menu is open */}
         <div className={`${menuOpen ? "block" : "hidden"} lg:block`}>
           <NavbarLinks />
         </div>
-        <NavbarBtn />
-        <button className="lg:hidden text-2xl p-3 border border-orange rounded-full text-white" onClick={toggleMenu}>
-          <GiHamburgerMenu />
-        </button>
+        <div className="flex items-center gap-3">
+          <NavbarBtn />
+          <button
+            type="button"
+            aria-label="Toggle navigation"
+            onClick={() => setMenuOpen((open) => !open)}
+            className="lg:hidden rounded-md border border-white/10 p-2 text-lightGrey transition-colors hover:text-white"
+          >
+            {menuOpen ? <HiX size={20} /> : <HiMenuAlt3 size={20} />}
+          </button>
+        </div>
       </div>
     </nav>
   );

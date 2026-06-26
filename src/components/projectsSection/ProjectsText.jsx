@@ -1,12 +1,20 @@
-import React from 'react'
+import React from "react";
 
 const ProjectsText = () => {
   return (
-    <div className='flex flex-col items-center mt-[100px]'>
-        <h2 className='md:text-6xl sm:text-4xl text-cyan mb-10'>Projects</h2>
-        <p className='text-lg text-center text-white max-w-[760px]'>Production systems built for real businesses, from full-stack operations platforms to public portals. Some are private client-owned projects, while public ones link directly to the live site.</p>
+    <div className="max-w-[760px]">
+      <p className="text-sm font-semibold uppercase tracking-[0.22em] text-cyan">
+        Selected Projects
+      </p>
+      <h2 className="mt-3 text-3xl font-bold tracking-tight text-white md:text-5xl">
+        Systems built for operations, portals, and internal workflows.
+      </h2>
+      <p className="mt-5 text-lg leading-8 text-lightGrey">
+        A mix of public and client-owned systems. Public projects link to live
+        sites; private projects keep previews limited.
+      </p>
     </div>
-  )
-}
+  );
+};
 
-export default ProjectsText
+export default ProjectsText;

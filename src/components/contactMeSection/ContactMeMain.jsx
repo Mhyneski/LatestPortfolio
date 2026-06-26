@@ -1,17 +1,16 @@
-import React from 'react'
-import ContactMeLeft from './ContactMeLeft'
-import ContactMeRight from './ContactMeRight'
+import React from "react";
+import ContactMeLeft from "./ContactMeLeft";
+import ContactMeRight from "./ContactMeRight";
 
 const ContactMeMain = () => {
   return (
-    <div id='contact' className='max-w-[1200px] mx-auto items-center justify-center mt-[100px] px-4'>
-        <h2 className='md:text-6xl sm:text-4xl text-cyan mb-10 text-center'>Contact Me</h2>
-        <div className='flex justify-between gap-12 bg-lightBrown/70 border border-darkGrey p-8 rounded-xl lg:flex-row sm:flex-col'>
-            <ContactMeLeft/>
-            <ContactMeRight/>
-        </div>
-    </div>
-  )
-}
+    <section id="contact" className="px-4 py-24">
+      <div className="mx-auto grid max-w-[1180px] gap-8 rounded-2xl border border-white/10 bg-white/[0.03] p-6 md:p-8 lg:grid-cols-[1fr_0.85fr]">
+        <ContactMeLeft />
+        <ContactMeRight />
+      </div>
+    </section>
+  );
+};
 
-export default ContactMeMain
+export default ContactMeMain;

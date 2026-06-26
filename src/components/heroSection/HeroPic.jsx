@@ -1,19 +1,26 @@
 import React from "react";
-import { RiReactjsLine } from "react-icons/ri";
 
 const HeroPic = () => {
   return (
-    <div className="h-full flex items-center justify-center relative">
-      <div className="relative w-full max-w-[420px] aspect-[4/5] rounded-2xl overflow-hidden border border-orange/70 bg-lightBrown shadow-cyanShadow">
-        <img
-          src="../../images/Mhynedp.jpg"
-          alt="Profile of Mhyne Jhestine Magno"
-          className="w-full h-full object-cover opacity-90"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent"></div>
-      </div>
-      <div className="absolute inset-0 -z-10 md:flex sm:hidden justify-center items-center overflow-hidden">
-        <RiReactjsLine className="max-h-[560px] md:h-[90%] sm:h-[120%] w-auto text-cyan/30 blur-sm animate-[spin_20s_linear_infinite] max-w-full" />
+    <div className="mx-auto w-full max-w-[380px] lg:ml-auto">
+      <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-3 shadow-2xl">
+        <div className="overflow-hidden rounded-xl border border-white/10">
+          <img
+            src="../../images/Mhynedp.jpg"
+            alt="Profile of Mhyne Jhestine Magno"
+            className="aspect-[4/5] w-full object-cover grayscale"
+          />
+        </div>
+        <div className="grid grid-cols-2 gap-3 pt-3 text-sm">
+          <div className="rounded-lg bg-black/30 p-3">
+            <p className="text-lightGrey">Location</p>
+            <p className="mt-1 font-semibold text-white">Dubai, UAE</p>
+          </div>
+          <div className="rounded-lg bg-black/30 p-3">
+            <p className="text-lightGrey">Focus</p>
+            <p className="mt-1 font-semibold text-white">Cloud apps</p>
+          </div>
+        </div>
       </div>
     </div>
   );

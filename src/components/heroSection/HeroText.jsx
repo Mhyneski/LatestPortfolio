@@ -1,19 +1,56 @@
 import React from "react";
+import { Link } from "react-scroll";
+
+const stats = [
+  { value: "2+", label: "Years building software" },
+  { value: "AWS", label: "Serverless applications" },
+  { value: "Full-stack", label: "Product delivery" },
+];
 
 const HeroText = () => {
   return (
-    <div className="flex flex-col gap-5 h-full justify-center md:text-left sm:text-center w-full min-w-0">
-      <p className="lg:text-2xl md:text-lg sm:text-sm uppercase text-lightCyan font-bold md:tracking-[0.14em] sm:tracking-[0.08em] leading-7 break-words">
+    <div className="min-w-0">
+      <p className="text-sm font-semibold uppercase tracking-[0.28em] text-cyan">
         Full-Stack Software Engineer
       </p>
-      <h1 className="md:text-[2.8rem] lg:text-6xl sm:text-3xl text-orange font-bold uppercase leading-tight break-words [overflow-wrap:anywhere]">
-        <span className="block">Mhyne Jhestine</span>
-        <span className="block">Magno</span>
+      <h1 className="mt-5 max-w-[760px] text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl">
+        Building reliable web systems for business operations.
       </h1>
-      <p className="md:text-xl sm:text-base md:leading-8 sm:leading-7 mt-2 text-white max-w-[620px] md:mx-0 sm:mx-auto">
-        Next.js, TypeScript, and AWS serverless developer building cloud-based
-        business web applications.
+      <p className="mt-6 max-w-[680px] text-lg leading-8 text-lightGrey">
+        I am Mhyne Jhestine Magno, a Dubai-based engineer focused on Next.js,
+        TypeScript, AWS serverless, GraphQL APIs, PostgreSQL, Prisma, and
+        role-based internal platforms.
       </p>
+      <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+        <Link
+          to="projects"
+          smooth={true}
+          spy={true}
+          duration={500}
+          offset={-90}
+          className="cursor-pointer rounded-md bg-cyan px-5 py-3 text-center text-sm font-bold text-black transition-colors hover:bg-lightCyan"
+        >
+          View Projects
+        </Link>
+        <Link
+          to="contact"
+          smooth={true}
+          spy={true}
+          duration={500}
+          offset={-90}
+          className="cursor-pointer rounded-md border border-white/15 px-5 py-3 text-center text-sm font-bold text-white transition-colors hover:border-cyan hover:text-cyan"
+        >
+          Contact Me
+        </Link>
+      </div>
+      <div className="mt-12 grid max-w-[760px] grid-cols-1 gap-3 md:grid-cols-3">
+        {stats.map((item) => (
+          <div key={item.label} className="rounded-lg border border-white/10 bg-white/[0.03] p-4 sm:min-h-0">
+            <p className="text-lg font-bold text-white md:text-xl">{item.value}</p>
+            <p className="mt-1 text-xs leading-5 text-lightGrey md:text-sm">{item.label}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

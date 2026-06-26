@@ -1,11 +1,16 @@
-import React from 'react'
+import React from "react";
 
 const ExperienceText = () => {
   return (
-    <div className='flex flex-col items-center mt-[100px] '>
-        <h2 className='md:text-6xl sm:text-4xl text-cyan mb-10'>Experience</h2>
+    <div className="max-w-[720px]">
+      <p className="text-sm font-semibold uppercase tracking-[0.22em] text-cyan">
+        Experience
+      </p>
+      <h2 className="mt-3 text-3xl font-bold tracking-tight text-white md:text-5xl">
+        Building, integrating, and maintaining business-critical systems.
+      </h2>
     </div>
-  )
-}
+  );
+};
 
-export default ExperienceText
+export default ExperienceText;

@@ -49,7 +49,7 @@ const experiences = [
 
 const AllExperience = () => {
   return (
-    <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-6 mt-12">
+    <div className="mt-10 grid gap-4">
       {experiences.map((experience, index) => {
         return (
           <div key={experience.company}>

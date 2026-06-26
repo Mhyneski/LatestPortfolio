@@ -1,112 +1,42 @@
 import React from "react";
-import { FaReact } from "react-icons/fa6";
-import { RiTailwindCssFill } from "react-icons/ri";
-import {
-  SiAmazoncognito,
-  SiAmazonrds,
-  SiAmazons3,
-  SiAmazonwebservices,
-  SiAwslambda,
-  SiFastapi,
-  SiGraphql,
-  SiNextdotjs,
-  SiPostgresql,
-  SiPrisma,
-  SiReactquery,
-  SiShadcnui,
-  SiTypescript,
-  SiVitest,
-  SiZod,
-} from "react-icons/si";
-import SingleSkill from "./SingleSkill";
 
-const skills = [
+const skillGroups = [
   {
-    skill: "Next.js",
-    icon: SiNextdotjs,
+    title: "Frontend",
+    skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "shadcn/ui", "TanStack Query"],
   },
   {
-    skill: "React",
-    icon: FaReact,
+    title: "Backend & APIs",
+    skills: ["Node.js", "Python", "FastAPI", "GraphQL", "REST APIs", "Zod"],
   },
   {
-    skill: "TypeScript",
-    icon: SiTypescript,
+    title: "Cloud & Infrastructure",
+    skills: ["AWS Amplify Gen 2", "Lambda", "Cognito", "AppSync", "S3", "CDK"],
   },
   {
-    skill: "AWS",
-    icon: SiAmazonwebservices,
-  },
-  {
-    skill: "Lambda",
-    icon: SiAwslambda,
-  },
-  {
-    skill: "GraphQL",
-    icon: SiGraphql,
-  },
-  {
-    skill: "Cognito",
-    icon: SiAmazoncognito,
-  },
-  {
-    skill: "PostgreSQL",
-    icon: SiPostgresql,
-  },
-  {
-    skill: "Prisma",
-    icon: SiPrisma,
-  },
-  {
-    skill: "S3",
-    icon: SiAmazons3,
-  },
-  {
-    skill: "RDS",
-    icon: SiAmazonrds,
-  },
-  {
-    skill: "TailwindCSS",
-    icon: RiTailwindCssFill,
-  },
-  {
-    skill: "shadcn/ui",
-    icon: SiShadcnui,
-  },
-  {
-    skill: "TanStack Query",
-    icon: SiReactquery,
-  },
-  {
-    skill: "FastAPI",
-    icon: SiFastapi,
-  },
-  {
-    skill: "Zod",
-    icon: SiZod,
-  },
-  {
-    skill: "Vitest",
-    icon: SiVitest,
+    title: "Data & Quality",
+    skills: ["PostgreSQL", "Prisma ORM", "DynamoDB", "MongoDB", "Supabase", "Vitest"],
   },
 ];
 
 const AllSkills = () => {
   return (
-    <div>
-      <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-4 max-w-[1100px] mx-auto">
-        {skills.map((item, index) => {
-          return (
-            <div key={index}>
-              <SingleSkill
-                key={index}
-                text={item.skill}
-                imgSvg={<item.icon />}
-              />
-            </div>
-          );
-        })}
-      </div>
+    <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+      {skillGroups.map((group) => (
+        <div key={group.title} className="rounded-xl border border-white/10 bg-white/[0.03] p-5">
+          <h3 className="text-base font-bold text-white">{group.title}</h3>
+          <div className="mt-5 flex flex-wrap gap-2">
+            {group.skills.map((skill) => (
+              <span
+                key={skill}
+                className="rounded-md border border-white/10 bg-black/25 px-3 py-1.5 text-sm text-lightGrey"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   );
 };

@@ -2,16 +2,24 @@ import React from "react";
 
 const SingleExperience = ({ experience }) => {
   return (
-    <div className="h-full border border-darkGrey bg-lightBrown/70 rounded-xl p-6">
-      <p className="font-bold text-cyan text-xl">{experience.job}</p>
-      <p className="text-orange mt-1">{experience.company}</p>
-      <p className="text-lightGrey mt-1">{experience.date}</p>
-      <ul className="list-disc mt-4 pl-4 text-white space-y-2 leading-7">
-        {experience.responsibilities.map((resp, index) => {
-          return <li key={index}>{resp}</li>;
+    <article className="grid gap-5 rounded-xl border border-white/10 bg-white/[0.03] p-6 md:grid-cols-[260px_1fr]">
+      <div>
+        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan">
+          {experience.date}
+        </p>
+        <h3 className="mt-3 text-xl font-bold text-white">{experience.job}</h3>
+        <p className="mt-1 text-lightGrey">{experience.company}</p>
+      </div>
+      <ul className="space-y-3 text-lightGrey">
+        {experience.responsibilities.map((resp) => {
+          return (
+            <li key={resp} className="border-l border-white/10 pl-4 leading-7">
+              {resp}
+            </li>
+          );
         })}
       </ul>
-    </div>
+    </article>
   );
 };
 

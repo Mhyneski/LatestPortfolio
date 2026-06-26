@@ -44,12 +44,12 @@ const ContactMeForm = () => {
 
   return (
     <div>
-        <p className='text-cyan'>{success}</p>
-        <form action="" className='flex flex-col gap-4 text-white' ref={form} onSubmit={sendEmail}>
-            <input name='from_name' type="text" placeholder='Your name' required className='h-12 rounded-lg bg-lightBrown px-2' value={name} onChange={handleName}/>
-            <input name='from_email' type="email" placeholder='Your email' required className='h-12 rounded-lg bg-lightBrown px-2' value={email} onChange={handleEmail}/>
-            <textarea name='message' type="text" placeholder='Message' rows="9" cols="58" required className='rounded-lg bg-lightBrown p-2' value={message} onChange={handleMessage}/> 
-            <button type='submit' className='w-full rounded-lg border border-cyan text-white h-12 font-bold text-xl hover:bg-darkCyan bg-cyan transition-all duration-500'>Send</button>
+        <p className='mb-3 text-sm font-medium text-cyan'>{success}</p>
+        <form action="" className='flex flex-col gap-3 text-white' ref={form} onSubmit={sendEmail}>
+            <input name='from_name' type="text" placeholder='Your name' required className='h-12 rounded-md border border-white/10 bg-black/30 px-4 text-sm outline-none transition-colors placeholder:text-grey focus:border-cyan' value={name} onChange={handleName}/>
+            <input name='from_email' type="email" placeholder='Your email' required className='h-12 rounded-md border border-white/10 bg-black/30 px-4 text-sm outline-none transition-colors placeholder:text-grey focus:border-cyan' value={email} onChange={handleEmail}/>
+            <textarea name='message' type="text" placeholder='Message' rows="7" required className='rounded-md border border-white/10 bg-black/30 p-4 text-sm outline-none transition-colors placeholder:text-grey focus:border-cyan' value={message} onChange={handleMessage}/> 
+            <button type='submit' className='h-12 rounded-md bg-cyan px-4 text-sm font-bold text-black transition-colors hover:bg-lightCyan'>Send Message</button>
         </form>
     </div>
   )

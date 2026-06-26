@@ -6,7 +6,7 @@ import SingleInfo from './SingleInfo';
 
 const ContactInfo = () => {
   return (
-    <div className='flex flex-col gap-4 text-white'>
+    <div className='flex flex-col gap-4 text-lightGrey'>
         <SingleInfo text="jhestineitsolution@gmail.com" Image={HiOutlineMail}/>
         <SingleInfo text="linkedin.com/in/mhyne-jhestine-magno-319551308" Image={FaLinkedin}/>
         <SingleInfo text="Naif, Dubai, United Arab Emirates" Image={TfiLocationPin}/>

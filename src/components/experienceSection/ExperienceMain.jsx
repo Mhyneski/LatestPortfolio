@@ -5,11 +5,13 @@ import AllExperience from "./AllExperience";
 
 const ExperienceMain = () => {
   return (
-    <div id="experience" className="max-w-[1200px] mx-auto px-4">
-      <ExperienceText />
-      <ExperienceTop />
-      <AllExperience />
-    </div>
+    <section id="experience" className="border-b border-white/10 px-4 py-24">
+      <div className="mx-auto max-w-[1180px]">
+        <ExperienceText />
+        <ExperienceTop />
+        <AllExperience />
+      </div>
+    </section>
   );
 };
 
