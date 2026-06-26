@@ -2,20 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 @import "tailwindcss";
 @theme {
-  --color-brown: #53423e;
-  --color-lightBrown: #645550;
-  --color-darkBrown: #2c2523;
-  --color-black: #1e1917;
-  --color-white: #f1e1d9;
+  --color-brown: #09090b;
+  --color-lightBrown: #18181b;
+  --color-darkBrown: #020617;
+  --color-black: #000000;
+  --color-white: #f8fafc;
   --color-cyan: #15d1e9;
   --color-lightCyan: #88e5f0;
   --color-darkCyan: #009fb3;
-  --color-orange: #fb9718;
-  --color-lightOrange: #fac27b;
-  --color-darkOrange: #d28422;
-  --color-grey: #626965;
-  --color-lightGrey: #978580;
-  --color-darkGrey: #3f4441;
+  --color-orange: #f97316;
+  --color-lightOrange: #fdba74;
+  --color-darkOrange: #c2410c;
+  --color-grey: #64748b;
+  --color-lightGrey: #cbd5e1;
+  --color-darkGrey: #334155;
   --font-body: "Josefin Sans", "sans-serif"; 
   --font-special: "Nunito", "sans-serif"; 
   --shadow-cyanShadow: 0px 0px 20px 0px rgba(94, 206, 220, 0.5);
@@ -34,5 +34,5 @@ html {
 }
 
 body {
-  @apply bg-darkBrown overflow-x-hidden;
+  @apply bg-black overflow-x-hidden;
 }

@@ -13,7 +13,7 @@ import SubSkills from './components/skillsSection/SubSkills'
 
 function App() {
   return (
-      <main className='font-body'>
+      <main className='font-body overflow-x-hidden max-w-full'>
         <NavbarMain/>
         <HeroMain/>
         <HeroGradient/>

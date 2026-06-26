@@ -11,18 +11,16 @@ const NavbarMain = () => {
     setMenuOpen(!menuOpen);
   }
   return (
-    <nav className="max-w-[1300px] mx-auto px-4 w-full fixed left-[50%] -translate-x-[50%] z-20 flex gap-4 mt-2">
-      <div className="flex justify-between w-full max-w-[1200px] mx-auto bg-black items-center p-6 rounded-r-full rounded-l-full border-[0.5px] border-orange">
+    <nav className="fixed inset-x-0 z-20 mt-2 px-3">
+      <div className="flex justify-between w-full max-w-[1200px] mx-auto bg-black items-center md:p-6 sm:p-4 rounded-r-full rounded-l-full border-[0.5px] border-orange">
         <NavbarLogo />
         {/* links hidden by default, shown on large screens or when menu is open */}
         <div className={`${menuOpen ? "block" : "hidden"} lg:block`}>
           <NavbarLinks />
         </div>
         <NavbarBtn />
-      </div>
-      <div className={`flex lg:hidden sm:block bg-black items-center justify-center rounded-full border-[0.5px] border-orange ${menuOpen? 'pt-11 transition-all duration-500': 'pt-0 transition-all duration-500'}`}>
-        <button className="text-2xl p-3 border border-orange rounded-full text-white" onClick={toggleMenu}>
-        <GiHamburgerMenu />
+        <button className="lg:hidden text-2xl p-3 border border-orange rounded-full text-white" onClick={toggleMenu}>
+          <GiHamburgerMenu />
         </button>
       </div>
     </nav>

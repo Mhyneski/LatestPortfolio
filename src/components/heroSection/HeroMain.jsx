@@ -6,8 +6,8 @@ import SubHeroSection from './SubHeroSection'
 
 const HeroMain = () => {
   return (
-    <div className='pt-40 pb-16'>
-        <div className='flex md:flex-row sm:flex-col max-w-[1200px] mx-auto justify-between items-center relative px-4'>
+    <div className='pt-32 pb-20 overflow-hidden'>
+        <div className='grid md:grid-cols-[1.05fr_0.95fr] sm:grid-cols-1 max-w-[1200px] w-full mx-auto gap-12 items-center relative px-4 min-w-0'>
         <HeroText/>
         <HeroPic/>
         </div>

@@ -1,75 +1,60 @@
 import React from "react";
 import SingleExperience from "./SingleExperience";
-import { FaArrowRight } from "react-icons/fa";
-import { motion } from "framer-motion";
-import { fadeIn } from "../../framerMotion/variants";
 
 const experiences = [
   {
-    job: "Capstone Project Developer",
-    company: "STI Global City",
-    date: "2023",
+    job: "Software Engineer",
+    company: "O-KUN Frontier Innovations Inc.",
+    date: "April 2025 - Present",
     responsibilities: [
-      "Developed a full-stack web application as part of the capstone project.",
-      "Designed and implemented key system features using the MERN stack.",
-      "Collaborated with teammates to meet project requirements and deadlines.",
-      "Presented and defended the project to faculty and evaluators.",
+      "Developed and maintained business web applications using Next.js, React, TypeScript, and AWS.",
+      "Built responsive role-based interfaces for administrators, store users, technicians, and head-office managers.",
+      "Implemented GraphQL APIs and AWS Lambda functions for ticketing, scheduling, maintenance, and user workflows.",
+      "Integrated Cognito authentication, PostgreSQL data models, Prisma ORM, S3 file handling, and AWS serverless infrastructure.",
+    ],
+  },
+  {
+    job: "Freelance Developer / Intern",
+    company: "Zhiyuan Enterprise Group Inc.",
+    date: "January 2025 - March 2025",
+    responsibilities: [
+      "Developed an inventory management system tailored to company operational needs.",
+      "Implemented database structures for efficient product tracking and inventory records.",
+      "Integrated the system into the company workflow and supported users during adoption.",
+      "Provided technical support, debugging, and system maintenance using a MERN stack foundation.",
     ],
   },
   {
     job: "Freelance Web Developer",
     company: "Self-Employed",
-    date: "2024",
+    date: "2023 - January 2025",
     responsibilities: [
-      "Designed and developed web-based projects for various clients.",
-      "Worked with modern web technologies, including React.js and Node.js.",
-      "Customized and optimized applications for client needs.",
-      "Managed project timelines and delivered high-quality solutions.",
+      "Designed and developed web-based projects for various clients using full-stack web technologies.",
+      "Built client-facing pages, database-backed features, and custom web application workflows.",
+      "Handled requirement clarification, implementation, troubleshooting, and delivery support.",
+      "Delivered responsive interfaces and practical business workflows with MERN stack tools.",
     ],
   },
   {
-    job: "Freelance Developer / Intern",
-    company: "Zhiyuan Company",
-    date: "2025",
+    job: "BS Information Technology",
+    company: "STI Global City",
+    date: "Education",
     responsibilities: [
-      "Developed an inventory management system tailored to company needs.",
-      "Implemented database structures for efficient product tracking.",
-      "Ensured seamless integration of the system into their workflow.",
-      "Provided technical support and system maintenance.",
-    ],
-  },
-   {
-    job: "Software Engineer",
-    company: "OFI O-Kun",
-    date: "2025 - 2026",
-    responsibilities: [
-      "Developed multi-feature web platforms including blog systems, directory modules, and calendar management.",
-      "Implemented role-based navigation and access control systems.",
-      "Integrated multiple APIs and handled frontend-backend development using Next.js, TypeScript, Chakra UI, FastAPI, and AWS.",
+      "Completed a Bachelor of Science in Information Technology.",
+      "Built and presented full-stack academic and capstone project work.",
+      "Strengthened software development fundamentals, database design, and application delivery practices.",
     ],
   },
 ];
 
 const AllExperience = () => {
   return (
-    <div className="flex md:flex-row md:gap-10 sm:flex-col sm:gap-0 items-center justify-center ">
+    <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-6 mt-12">
       {experiences.map((experience, index) => {
         return (
-          <>
+          <div key={experience.company}>
             <SingleExperience key={index} experience={experience} />
-            {index < 3 ? (
-              <motion.div
-                variants={fadeIn("right", 0)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: false, amount: 0.7 }}
-              >
-                <FaArrowRight className="text-6xl text-orange lg:block sm:hidden" />
-              </motion.div>
-            ) : (
-              ""
-            )}
-          </>
+          </div>
         );
       })}
     </div>

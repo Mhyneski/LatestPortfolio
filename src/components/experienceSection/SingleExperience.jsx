@@ -1,25 +1,17 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { fadeIn } from "../../framerMotion/variants";
 
 const SingleExperience = ({ experience }) => {
   return (
-    <motion.div
-      variants={fadeIn("right", 0)}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: false, amount: 0.7 }}
-      className="lg:h-[610px] md:h-[510px] md:w-[240px] sm:h-auto sm:w-full border-2 border-orange border-dashed rounded-2xl mt-12 p-4"
-    >
-      <p className="font-bold text-cyan">{experience.job}</p>
-      <p className="text-orange">{experience.company}</p>
-      <p className="text-lightGrey">{experience.date}</p>
-      <ul className="list-disc mt-4 pl-4 text-white">
+    <div className="h-full border border-darkGrey bg-lightBrown/70 rounded-xl p-6">
+      <p className="font-bold text-cyan text-xl">{experience.job}</p>
+      <p className="text-orange mt-1">{experience.company}</p>
+      <p className="text-lightGrey mt-1">{experience.date}</p>
+      <ul className="list-disc mt-4 pl-4 text-white space-y-2 leading-7">
         {experience.responsibilities.map((resp, index) => {
           return <li key={index}>{resp}</li>;
         })}
       </ul>
-    </motion.div>
+    </div>
   );
 };
 

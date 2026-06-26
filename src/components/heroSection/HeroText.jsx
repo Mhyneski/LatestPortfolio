@@ -1,37 +1,19 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { fadeIn } from "../../framerMotion/variants";
 
 const HeroText = () => {
   return (
-    <div className="flex flex-col gap-4 h-full justify-center md:text-left sm:text-center">
-      <motion.h2
-        variants={fadeIn("down", 0.2)}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0 }}
-        className="lg:text-2xl sm:text-xl  uppercase text-lightGrey "
-      >
-        Software Engineer
-      </motion.h2>
-      <motion.h1
-        variants={fadeIn("right", 0.4)}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0 }}
-        className="md:text-[2.8rem] lg:text-6xl sm:text-4xl text-orange font-bold uppercase"
-      >
-        Mhyne Jhestine Magno
-      </motion.h1>
-      <motion.p
-        variants={fadeIn("up", 0.6)}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0 }}
-        className="text-lg mt-4 text-white"
-      >
-        A Software Engineer
-      </motion.p>
+    <div className="flex flex-col gap-5 h-full justify-center md:text-left sm:text-center w-full min-w-0">
+      <p className="lg:text-2xl md:text-lg sm:text-sm uppercase text-lightCyan font-bold md:tracking-[0.14em] sm:tracking-[0.08em] leading-7 break-words">
+        Full-Stack Software Engineer
+      </p>
+      <h1 className="md:text-[2.8rem] lg:text-6xl sm:text-3xl text-orange font-bold uppercase leading-tight break-words [overflow-wrap:anywhere]">
+        <span className="block">Mhyne Jhestine</span>
+        <span className="block">Magno</span>
+      </h1>
+      <p className="md:text-xl sm:text-base md:leading-8 sm:leading-7 mt-2 text-white max-w-[620px] md:mx-0 sm:mx-auto">
+        Next.js, TypeScript, and AWS serverless developer building cloud-based
+        business web applications.
+      </p>
     </div>
   );
 };

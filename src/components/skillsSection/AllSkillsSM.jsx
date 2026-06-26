@@ -1,57 +1,32 @@
 import React from "react";
-import { FaHtml5 } from "react-icons/fa";
-import { FaCss3Alt } from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io5";
 import { FaReact } from "react-icons/fa6";
-import { SiMongodb } from "react-icons/si";
-import { IoLogoFirebase } from "react-icons/io5";
-import { RiNodejsLine } from "react-icons/ri";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { FaAws } from "react-icons/fa";
-import { SiChakraui } from "react-icons/si";
-import { SiFastapi } from "react-icons/si";
-import { SiPython } from "react-icons/si";
-import { SiNextdotjs } from "react-icons/si";
-import { SiTypescript } from "react-icons/si";
-import { motion } from "framer-motion";
-import { fadeIn } from "../../framerMotion/variants";
+import {
+  SiAmazoncognito,
+  SiAmazonrds,
+  SiAmazons3,
+  SiAmazonwebservices,
+  SiAwslambda,
+  SiFastapi,
+  SiGraphql,
+  SiNextdotjs,
+  SiPostgresql,
+  SiPrisma,
+  SiReactquery,
+  SiShadcnui,
+  SiTypescript,
+  SiVitest,
+  SiZod,
+} from "react-icons/si";
 
 const skills = [
   {
-    skill: "HTML",
-    icon: FaHtml5,
-  },
-  {
-    skill: "CSS",
-    icon: FaCss3Alt,
-  },
-  {
-    skill: "JavaScript",
-    icon: IoLogoJavascript,
-  },
-  {
-    skill: "ReactJS",
-    icon: FaReact,
-  },
-  {
-    skill: "MongoDB",
-    icon: SiMongodb,
-  },
-  {
-    skill: "Firebase",
-    icon: IoLogoFirebase,
-  },
-  {
-    skill: "NodeJS",
-    icon: RiNodejsLine,
-  },
-  {
-    skill: "TailwindCSS",
-    icon: RiTailwindCssFill,
-  },
-  {
     skill: "Next.js",
     icon: SiNextdotjs,
+  },
+  {
+    skill: "React",
+    icon: FaReact,
   },
   {
     skill: "TypeScript",
@@ -59,38 +34,74 @@ const skills = [
   },
   {
     skill: "AWS",
-    icon: FaAws,
+    icon: SiAmazonwebservices,
   },
   {
-    skill: "Chakra UI",
-    icon: SiChakraui,
+    skill: "Lambda",
+    icon: SiAwslambda,
+  },
+  {
+    skill: "GraphQL",
+    icon: SiGraphql,
+  },
+  {
+    skill: "Cognito",
+    icon: SiAmazoncognito,
+  },
+  {
+    skill: "PostgreSQL",
+    icon: SiPostgresql,
+  },
+  {
+    skill: "Prisma",
+    icon: SiPrisma,
+  },
+  {
+    skill: "S3",
+    icon: SiAmazons3,
+  },
+  {
+    skill: "RDS",
+    icon: SiAmazonrds,
+  },
+  {
+    skill: "TailwindCSS",
+    icon: RiTailwindCssFill,
+  },
+  {
+    skill: "shadcn/ui",
+    icon: SiShadcnui,
+  },
+  {
+    skill: "TanStack Query",
+    icon: SiReactquery,
   },
   {
     skill: "FastAPI",
     icon: SiFastapi,
   },
   {
-    skill: "Python",
-    icon: SiPython,
+    skill: "Zod",
+    icon: SiZod,
+  },
+  {
+    skill: "Vitest",
+    icon: SiVitest,
   },
 ];
 
 const AllSkillsSM = () => {
   return (
-    <div className="grid md:grid-cols-4 sm:grid-cols-2 gap12 my-12">
+    <div className="grid grid-cols-1 gap-4 my-12">
       {skills.map((item, index) => {
         return (
-          <motion.div
-            variants={fadeIn("up", 0.2)}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0.7 }}
+          <div
             key={index}
-            className="flex flex-col items-center"
+            className="flex flex-col items-center rounded-lg border border-darkGrey bg-lightBrown/70 px-4 py-5"
           >
-            <item.icon className="text-7xl text-orange" />
-            <p className="text-center mt-4 text-white">{item.skill}</p>
-          </motion.div>
+            <item.icon className="text-5xl text-cyan" />
+            <p className="text-center mt-4 text-white font-bold leading-tight">{item.skill}</p>
+          </div>
         );
       })}
     </div>
