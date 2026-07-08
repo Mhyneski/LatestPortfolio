@@ -1,16 +1,27 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { HiDownload, HiExternalLink, HiX } from "react-icons/hi";
-import { RESUME_FILE, RESUME_MODAL_OPEN_EVENT } from "./resumeModalEvents";
+import {
+  RESUME_FILE,
+  RESUME_MODAL_OPEN_EVENT,
+  RESUME_PREVIEW_FILE,
+} from "./resumeModalEvents";
 
 const ResumeModal = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isFrameLoaded, setIsFrameLoaded] = useState(false);
+  const frameLoadTimer = useRef(undefined);
 
   useEffect(() => {
-    const handleOpen = () => setIsOpen(true);
+    const handleOpen = () => {
+      window.clearTimeout(frameLoadTimer.current);
+      setIsFrameLoaded(false);
+      setIsOpen(true);
+    };
 
     window.addEventListener(RESUME_MODAL_OPEN_EVENT, handleOpen);
 
     return () => {
+      window.clearTimeout(frameLoadTimer.current);
       window.removeEventListener(RESUME_MODAL_OPEN_EVENT, handleOpen);
     };
   }, []);
@@ -83,11 +94,32 @@ const ResumeModal = () => {
             </a>
           </div>
         </div>
-        <div className="min-h-0 flex-1 bg-black">
+        <div className="relative min-h-0 flex-1 overflow-y-auto bg-black p-1 sm:p-3">
+          <img
+            src={RESUME_PREVIEW_FILE}
+            alt="Mhyne Jhestine Magno resume preview"
+            className="mx-auto block h-auto w-full bg-white md:hidden"
+          />
+          {!isFrameLoaded && (
+            <div className="absolute inset-0 z-10 hidden flex-col items-center justify-center gap-3 bg-black text-center md:flex">
+              <div className="h-10 w-10 animate-spin rounded-full border-2 border-cyan border-t-transparent" />
+              <p className="text-sm font-semibold text-lightGrey">
+                Loading resume preview...
+              </p>
+            </div>
+          )}
           <iframe
             title="Mhyne Jhestine Magno resume"
             src={`${RESUME_FILE}#toolbar=1&navpanes=0`}
-            className="h-full min-h-[70vh] w-full"
+            onLoad={() => {
+              window.clearTimeout(frameLoadTimer.current);
+              frameLoadTimer.current = window.setTimeout(() => {
+                setIsFrameLoaded(true);
+              }, 350);
+            }}
+            className={`hidden h-full min-h-[70vh] w-full transition-opacity duration-200 md:block ${
+              isFrameLoaded ? "opacity-100" : "opacity-0"
+            }`}
           />
         </div>
       </div>
