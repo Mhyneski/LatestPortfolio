@@ -1,11 +1,21 @@
-import React from "react";
 import SingleExperience from "./SingleExperience";
 
 const experiences = [
   {
+    job: "Lead Software Engineer",
+    company: "O-KUN Frontier Innovations Inc.",
+    date: "April 2026 - Present",
+    responsibilities: [
+      "Lead development of business web applications using Next.js, React, TypeScript, and AWS serverless services.",
+      "Guide implementation for role-based workflows across administrators, store users, technicians, and head-office managers.",
+      "Own technical direction for GraphQL APIs, Lambda functions, PostgreSQL data models, Prisma ORM, Cognito authentication, and S3 file workflows.",
+      "Coordinate feature delivery, code quality, debugging, and production support for internal operations platforms.",
+    ],
+  },
+  {
     job: "Software Engineer",
     company: "O-KUN Frontier Innovations Inc.",
-    date: "April 2025 - Present",
+    date: "April 2025 - March 2026",
     responsibilities: [
       "Developed and maintained business web applications using Next.js, React, TypeScript, and AWS.",
       "Built responsive role-based interfaces for administrators, store users, technicians, and head-office managers.",
@@ -50,10 +60,10 @@ const experiences = [
 const AllExperience = () => {
   return (
     <div className="mt-10 grid gap-4">
-      {experiences.map((experience, index) => {
+      {experiences.map((experience) => {
         return (
-          <div key={experience.company}>
-            <SingleExperience key={index} experience={experience} />
+          <div key={`${experience.company}-${experience.job}`}>
+            <SingleExperience experience={experience} />
           </div>
         );
       })}

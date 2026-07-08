@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-scroll";
 
 const stats = [
@@ -11,15 +10,15 @@ const HeroText = () => {
   return (
     <div className="min-w-0">
       <p className="text-sm font-semibold uppercase tracking-[0.28em] text-cyan">
-        Full-Stack Software Engineer
+        Lead Software Engineer
       </p>
       <h1 className="mt-5 max-w-[760px] text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl">
         Building reliable web systems for business operations.
       </h1>
       <p className="mt-6 max-w-[680px] text-lg leading-8 text-lightGrey">
-        I am Mhyne Jhestine Magno, a Dubai-based engineer focused on Next.js,
-        TypeScript, AWS serverless, GraphQL APIs, PostgreSQL, Prisma, and
-        role-based internal platforms.
+        I am Mhyne Jhestine Magno, a Dubai-based Lead Software Engineer
+        focused on Next.js, TypeScript, AWS serverless, GraphQL APIs,
+        PostgreSQL, Prisma, and role-based internal platforms.
       </p>
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">
         <Link
@@ -32,6 +31,13 @@ const HeroText = () => {
         >
           View Projects
         </Link>
+        <a
+          href="/Mhyne-Jhestine-Magno-Resume.pdf"
+          download
+          className="rounded-md border border-cyan/40 px-5 py-3 text-center text-sm font-bold text-cyan transition-colors hover:bg-cyan hover:text-black"
+        >
+          Download Resume
+        </a>
         <Link
           to="contact"
           smooth={true}
