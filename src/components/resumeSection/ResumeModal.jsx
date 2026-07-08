@@ -110,7 +110,7 @@ const ResumeModal = () => {
           )}
           <iframe
             title="Mhyne Jhestine Magno resume"
-            src={`${RESUME_FILE}#toolbar=1&navpanes=0`}
+            src={`${RESUME_FILE}#toolbar=1&navpanes=0&zoom=115`}
             onLoad={() => {
               window.clearTimeout(frameLoadTimer.current);
               frameLoadTimer.current = window.setTimeout(() => {
