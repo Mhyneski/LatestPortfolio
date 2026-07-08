@@ -5,6 +5,7 @@ import FooterMain from './components/footerSection/FooterMain'
 import HeroMain from './components/heroSection/HeroMain'
 import NavbarMain from './components/navbar/NavbarMain'
 import ProjectsMain from './components/projectsSection/ProjectsMain'
+import ResumeModal from './components/resumeSection/ResumeModal'
 import SkillsMain from './components/skillsSection/SkillsMain'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <ProjectsMain/>
         <ContactMeMain/>
         <FooterMain/>
+        <ResumeModal/>
       </main>
   )
 }

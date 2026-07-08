@@ -1,4 +1,5 @@
 import { Link } from "react-scroll";
+import { openResumeModal } from "../resumeSection/resumeModalEvents";
 
 const stats = [
   { value: "2+", label: "Years building software" },
@@ -31,13 +32,13 @@ const HeroText = () => {
         >
           View Projects
         </Link>
-        <a
-          href="/Mhyne-Jhestine-Magno-Resume.pdf"
-          download
-          className="rounded-md border border-cyan/40 px-5 py-3 text-center text-sm font-bold text-cyan transition-colors hover:bg-cyan hover:text-black"
+        <button
+          type="button"
+          onClick={openResumeModal}
+          className="cursor-pointer rounded-md border border-cyan/40 px-5 py-3 text-center text-sm font-bold text-cyan transition-colors hover:bg-cyan hover:text-black"
         >
-          Download Resume
-        </a>
+          View Resume
+        </button>
         <Link
           to="contact"
           smooth={true}

@@ -1,12 +1,14 @@
+import { openResumeModal } from "../resumeSection/resumeModalEvents";
+
 const NavbarBtn = () => {
   return (
-    <a
-      href="/Mhyne-Jhestine-Magno-Resume.pdf"
-      download
-      className="rounded-md border border-cyan/40 px-3 py-2 text-sm font-semibold text-cyan transition-colors hover:bg-cyan hover:text-black"
+    <button
+      type="button"
+      onClick={openResumeModal}
+      className="cursor-pointer rounded-md border border-cyan/40 px-3 py-2 text-sm font-semibold text-cyan transition-colors hover:bg-cyan hover:text-black"
     >
       Resume
-    </a>
+    </button>
   );
 };
 
